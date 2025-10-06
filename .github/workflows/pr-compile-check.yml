@@ -3,6 +3,15 @@ on:
   pull_request:  # プルリクエスト時にフックして動作
   workflow_dispatch: # 手動実行
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  UNITY_EDITOR_PATH: ${{ vars.UNITY_EDITOR_PATH }}
+  UNITY_PROJECT_PATH: ${{ vars.UNITY_PROJECT_PATH }}
+  PULL_REQUEST_URL: ${{ github.event.pull_request.url }}
+  SHA: ${{ github.sha }}
+  ACTOR: ${{ github.actor }}
+  DISCORD_WEBHOOK_URL: ${{ vars.DISCORD_WEBHOOK_URL }}
+
 jobs:
   Check:
     #Self-Hosted Runnerで動かす
@@ -20,17 +29,11 @@ jobs:
 
     # Unityを開く(エラーチェック)
     - name: OpenUnity
-      run: ${{ env.UNITY_EDITOR_PATH }} -quit -batchmode -projectPath ${{ secrets.UNITY_PROJECT_PATH }}
+      run: ${{ env.UNITY_EDITOR_PATH }} -quit -batchmode -projectPath ${{ env.UNITY_PROJECT_PATH }}
       shell: cmd
 
     # Discordに通知する
     - name: PostMessage
       if: ${{ success() }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PULL_REQUEST_URL: ${{ github.event.pull_request.url }}
-        SHA: ${{ github.sha }}
-        ACTOR: ${{ github.actor }}
-        TEXT: "Success"
       run:
-        Invoke-WebRequest -Headers @{"Content-Type"="application/json"} -Method Post -Body "{`"content`":`"${{ env.TEXT }} :_sikei_:\r${{ env.PULL_REQUEST_URL }}\r`"}" ${{ env.DISCORD_WEBHOOK_URL }}
+        Invoke-WebRequest -Headers @{"Content-Type"="application/json"} -Method Post -Body "{`"content`":`"Success`" :_sikei_:\r${{ env.PULL_REQUEST_URL }}\r`"}" ${{ env.DISCORD_WEBHOOK_URL }}
