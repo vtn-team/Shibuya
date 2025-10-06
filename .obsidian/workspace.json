@@ -1,0 +1,201 @@
+{
+  "main": {
+    "id": "72eb50025f39ef75",
+    "type": "split",
+    "children": [
+      {
+        "id": "f86639deb92d794a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "122222c62e45d744",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "spec/ux/ux_design.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ux_design"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ec90181fe0728dbb",
+    "type": "split",
+    "children": [
+      {
+        "id": "84e14c41776641ed",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4885e6f2cea3018b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "ファイルエクスプローラ"
+            }
+          },
+          {
+            "id": "16e7bffcf7b31139",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "検索"
+            }
+          },
+          {
+            "id": "7dae676c36198e7d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "ブックマーク"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "11511cd089dc554a",
+    "type": "split",
+    "children": [
+      {
+        "id": "7673bff5eae4990f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "603507747a2e90c5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "spec/ux/ux_design.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "ux_designへのバックリンク"
+            }
+          },
+          {
+            "id": "99b0d118b15c61cb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "spec/ux/ux_design.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "ux_designからのアウトゴーイングリンク"
+            }
+          },
+          {
+            "id": "2d1d106eb5b09b6d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "タグ"
+            }
+          },
+          {
+            "id": "988c23134dcccf45",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "spec/ux/ux_design.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "ux_designのアウトライン"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:クイックスイッチャーを開く": false,
+      "graph:グラフビューを開く": false,
+      "canvas:新規キャンバスを作成": false,
+      "daily-notes:今日のデイリーノートを開く": false,
+      "templates:テンプレートを挿入": false,
+      "command-palette:コマンドパレットを開く": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "122222c62e45d744",
+  "lastOpenFiles": [
+    "spec/README.md",
+    "spec/gamedesign/stage.md",
+    "spec/usecase/gameplay.md",
+    "spec/rule/stage.md",
+    "spec/ux/ux_design.md",
+    "spec/ux/consequently.md",
+    "spec/ux/presence.md",
+    "spec/code/MotionController.md",
+    "spec/code/Obstacle.md",
+    "spec/code/Item.md",
+    "spec/code/HitDetector.md",
+    "spec/code/GameManager.md",
+    "spec/code/Test/QuantizeTest.md",
+    "spec/code/Test/BoxSelectionTest.md",
+    "spec/code/Test",
+    "spec/code/System/SoundQuantizer.md",
+    "spec/code/System/BoxSelectionSheet.md",
+    "spec/code/System/BoxSelection.md",
+    "spec/code/System/Blackboard.md",
+    "spec/code/System",
+    "spec/code/PlayerAction/AttackAction.md",
+    "spec/code/Item/CoinItem.md",
+    "spec/ux/story_and_concept.md",
+    "spec/ux",
+    "spec/code/PlayerActionController.md",
+    "spec/code/StageCreator.md"
+  ]
+}
