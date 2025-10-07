@@ -32,8 +32,9 @@ jobs:
       run: ${{ env.UNITY_EDITOR_PATH }} -quit -batchmode -projectPath ${{ env.UNITY_PROJECT_PATH }}
       shell: cmd
 
-    # Discordに通知する
+    # Discordに通知する（失敗時のみ）
     - name: PostMessage
-      if: ${{ success() }}
-      run:
-        Invoke-WebRequest -Headers @{"Content-Type"="application/json"} -Method Post -Body "{`"content`":`"Success`" :_sikei_:\r${{ env.PULL_REQUEST_URL }}\r`"}" ${{ env.DISCORD_WEBHOOK_URL }}
+      if: failure()
+      run: |
+        Invoke-WebRequest -Uri ${{ env.DISCORD_WEBHOOK_URL }} -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"content":"${{ env.PULL_REQUEST_URL }}"}'
+      shell: pwsh
