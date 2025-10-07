@@ -60,6 +60,8 @@ public partial class Player : MonoBehaviour
     /// </summary>
     private void Awake()
     {
+        InjectDependencies();  // 生成コード側の注入を最初に適用
+
         // NOTE: PlayerInputコンポーネントが設定されていない場合は取得を試みる
         if (playerInput == null)
         {
@@ -95,6 +97,27 @@ public partial class Player : MonoBehaviour
         else
         {
             Debug.LogError("[Player] Pauseアクションが見つかりません。InputActionsに'Pause'アクションを設定してください。");
+        }
+    }
+
+    private void OnEnable()
+    {
+        _moveAction?.Enable();
+        _pauseAction?.Enable();
+    }
+
+    private void OnDisable()
+    {
+        if (_moveAction != null)
+        {
+            _moveAction.performed -= OnMovePerformed;
+            _moveAction.canceled -= OnMoveCanceled;
+            _moveAction.Disable();
+        }
+        if (_pauseAction != null)
+        {
+            _pauseAction.performed -= OnPausePerformed;
+            _pauseAction.Disable();
         }
     }
 
