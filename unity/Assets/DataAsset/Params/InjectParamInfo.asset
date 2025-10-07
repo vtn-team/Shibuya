@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a02034ea6c40c347b62ed412f159466, type: 3}
+  m_Name: InjectParamInfo
+  m_EditorClassIdentifier: 
+  _paramInfos:
+  - _group: EnemySpawner
+    _varName: maxEnemyNum
+    _viewName: "\u6575\u751F\u6210\u6700\u5927\u6570"
+  - _group: EnemySpawner
+    _varName: spawnProp
+    _viewName: "\u751F\u6210\u78BA\u7387"
+  - _group: Game
+    _varName: bpm
+    _viewName: "\u97F3\u697D\u306EBPM"
+  - _group: Game
+    _varName: playerMoveBeats
+    _viewName: "\u30D7\u30EC\u30A4\u30E4\u30FC\u306E\u79FB\u52D5\u62CD\u6570"
+  - _group: Game
+    _varName: enemySpawnBeats
+    _viewName: "\u6575\u306E\u751F\u6210\u62CD\u6570"
+  - _group: Game
+    _varName: oneLineCellNum
+    _viewName: "1\u5217\u4F55\u30BB\u30EB\u304B"
+  - _group: Game
+    _varName: enemySpawnInterval
+    _viewName: "\u6575\u914D\u7F6E\u9593\u9694"
+  - _group: Player
+    _varName: horizontalMoveDistance
+    _viewName: "\u5DE6\u53F3\u79FB\u52D5\u91CF"
+  - _group: Player
+    _varName: forwardMoveDistance
+    _viewName: "\u524D\u65B9\u79FB\u52D5\u91CF"
+  - _group: EnemySpawner
+    _varName: spawnCount
+    _viewName: "\u751F\u6210\u30AB\u30A6\u30F3\u30C8\u6570"

@@ -27,7 +27,18 @@
       "Bash(\"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.49f1\\Editor\\Unity.exe\" -batchmode -quit -projectPath . -executeMethod UnityEditor.EditorApplication.Exit -logFile compile.log)",
       "Bash(check.bat)",
       "Bash(cmd /c:*)",
-      "Bash(chmod:*)"
+      "Bash(chmod:*)",
+      "Bash(if [ ! -d \"unity/Assets/Scripts/Enemy\" ])",
+      "Bash(then mkdir -p \"unity/Assets/Scripts/Enemy\")",
+      "Bash(fi)",
+      "Bash(if [ ! -d \"log\" ])",
+      "Bash(then mkdir -p \"log\")",
+      "Bash(if [ -f \"log/2025-10-07.md\" ])",
+      "Bash(then cat \"log/2025-10-07.md\")",
+      "Bash(if [ ! -d \"unity/Assets/Scripts\" ])",
+      "Bash(then mkdir -p \"unity/Assets/Scripts\")",
+      "Bash(if [ ! -d \"unity/Assets/Settings\" ])",
+      "Bash(then mkdir -p \"unity/Assets/Settings\")"
     ],
     "deny": []
   }

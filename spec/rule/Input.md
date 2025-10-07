@@ -1,8 +1,6 @@
 # 入力回り
 
 ## InputSystem設定
-- Move: A/Dキー または 左右矢印キー
-- Jump: Spaceキー または △ボタン
-- Slide: Sキー または ×ボタン  
-- Attack: マウス左クリック または ◯ボタン
+- Move: A/D/Wキー または 左右上矢印キー
+- Attack: ENTER または ◯ボタン
 - Pause: Escキー
