@@ -36,7 +36,9 @@
       "Bash(if [ -f \"log/2025-10-07.md\" ])",
       "Bash(then cat \"log/2025-10-07.md\")",
       "Bash(if [ ! -d \"unity/Assets/Scripts\" ])",
-      "Bash(then mkdir -p \"unity/Assets/Scripts\")"
+      "Bash(then mkdir -p \"unity/Assets/Scripts\")",
+      "Bash(if [ ! -d \"unity/Assets/Settings\" ])",
+      "Bash(then mkdir -p \"unity/Assets/Settings\")"
     ],
     "deny": []
   }

@@ -12,17 +12,19 @@
 - bpm: BPM
 - playerMoveBeats: プレイヤー移動に使用する拍数
 - enemySpawnBeats: 敵生成に使用する拍数
-- 
+- oneLineCellNum: 1列のセル数
+- enemySpawnInterval: 敵生成間隔(m)
 
 # 処理フロー
 ## 初期化
 - SoundQuantizerを初期化してBGMを再生する
 - それぞれ外部変数で指定された拍数感覚で、クォンタイザにイベントを登録する
-	- 敵の生成
-	- プレイヤーの移動
+	- 敵の生成をenemySpawnBeats間隔で登録
+	- プレイヤーの移動をplayerMoveBeats間隔で登録
 
 ## 敵の生成
 - EnemySpawnerのSpawn()を呼び出す
+	- 列のセル数と配置間隔を渡す
 
 ## プレイヤーの移動
 - PlayerのMove()を呼び出す
