@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4344b6a5ba2c04d86830e367fa748d, type: 3}
   m_Name: InjectParamList
   m_EditorClassIdentifier: 
+  _spawnCount: 8
   _maxEnemyNum: 10
-  _spawnProp: 0.1
+  _spawnProp: 0.05
   _bpm: 120
   _playerMoveBeats: 4
   _enemySpawnBeats: 8

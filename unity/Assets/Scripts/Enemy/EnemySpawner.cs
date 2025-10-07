@@ -55,6 +55,7 @@ public partial class EnemySpawner : MonoBehaviour
         {
             return;
         }
+        spawnBeatCount = 0;
 
         // 生成した敵の総数カウント
         int totalSpawnedCount = 0;

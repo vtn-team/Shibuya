@@ -40,3 +40,6 @@ MonoBehaviour:
   - _group: Player
     _varName: forwardMoveDistance
     _viewName: "\u524D\u65B9\u79FB\u52D5\u91CF"
+  - _group: EnemySpawner
+    _varName: spawnCount
+    _viewName: "\u751F\u6210\u30AB\u30A6\u30F3\u30C8\u6570"
