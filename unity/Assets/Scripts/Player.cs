@@ -180,12 +180,6 @@ public partial class Player : MonoBehaviour
             return;
         }
 
-        // NOTE: 入力がない場合は何もしない
-        if (_currentMoveInput.sqrMagnitude < 0.01f)
-        {
-            return;
-        }
-
         // NOTE: 移動ベクトルを計算
         Vector3 moveDirection = Vector3.zero;
 

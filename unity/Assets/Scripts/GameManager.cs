@@ -20,11 +20,24 @@ public partial class GameManager : MonoBehaviour
     [SerializeField] private Player player;
 
     [Header("Timing Settings")]
+    [Tooltip("BPM")]
+    [SerializeField, Inject] private float bpm = 120f;
+    
+    [Tooltip("BGM")]
+    [SerializeField] private AudioSource bgmAudioSource = null;
+
     [Tooltip("プレイヤー移動に使用する拍数")]
     [SerializeField, Inject] private int playerMoveBeats = 4;
 
     [Tooltip("敵生成に使用する拍数")]
     [SerializeField, Inject] private int enemySpawnBeats = 8;
+
+    [Header("Spawn Settings")]
+    [Tooltip("1列のセル数")]
+    [SerializeField, Inject] private int oneLineCellNum = 5;
+
+    [Tooltip("敵生成間隔(m)")]
+    [SerializeField, Inject] private float enemySpawnInterval = 2.0f;
 
     #endregion
 
@@ -36,16 +49,13 @@ public partial class GameManager : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        // TODO: BGMのAudioSourceを取得して再生開始
-        // soundQuantizer.PlayAndSync(bgmAudioSource);
+        soundQuantizer.PlayAndSync(bgmAudioSource);
 
         // NOTE: 敵生成イベントを登録（enemySpawnBeats拍ごとに実行）
-        // TODO: SoundQuantizer.Quantizeメソッドの実装完了後に登録処理を実装
-        // soundQuantizer.Quantize(enemySpawnBeats, 0, OnEnemySpawn);
+        soundQuantizer.Quantize(OnEnemySpawn, enemySpawnBeats);
 
         // NOTE: プレイヤー移動イベントを登録（playerMoveBeats拍ごとに実行）
-        // TODO: SoundQuantizer.Quantizeメソッドの実装完了後に登録処理を実装
-        // soundQuantizer.Quantize(playerMoveBeats, 0, OnPlayerMove);
+        soundQuantizer.Quantize(OnPlayerMove, playerMoveBeats);
     }
 
     #endregion
@@ -63,6 +73,8 @@ public partial class GameManager : MonoBehaviour
         {
             enemySpawner.Spawn();
         }
+
+        soundQuantizer.Quantize(OnEnemySpawn, enemySpawnBeats);
     }
 
     /// <summary>
@@ -80,6 +92,8 @@ public partial class GameManager : MonoBehaviour
             // TODO: プレイヤー移動後に敵との衝突判定を実装
             // CheckPlayerEnemyCollision();
         }
+
+        soundQuantizer.Quantize(OnPlayerMove, playerMoveBeats);
     }
 
     #endregion
@@ -89,34 +103,19 @@ public partial class GameManager : MonoBehaviour
     /// <summary>
     /// 1列のセル数を取得
     /// NOTE: EnemySpawnerから呼び出される
-    /// TODO: 適切な値を設定または外部変数化
     /// </summary>
     public int GetCellCount()
     {
-        // TODO: 実際のセル数を返す実装
-        return 5; // 仮の値
+        return oneLineCellNum;
     }
 
     /// <summary>
     /// 配置間隔を取得
     /// NOTE: EnemySpawnerから呼び出される
-    /// TODO: 適切な値を設定または外部変数化
     /// </summary>
     public float GetSpawnInterval()
     {
-        // TODO: 実際の配置間隔を返す実装
-        return 2.0f; // 仮の値
-    }
-
-    /// <summary>
-    /// 生成確率を取得
-    /// NOTE: EnemySpawnerから呼び出される
-    /// TODO: 適切な値を設定または外部変数化
-    /// </summary>
-    public float GetSpawnProbability()
-    {
-        // TODO: 実際の生成確率を返す実装
-        return 0.5f; // 仮の値（50%）
+        return enemySpawnInterval;
     }
 
     #endregion

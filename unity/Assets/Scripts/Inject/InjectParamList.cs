@@ -6,7 +6,7 @@ using UnityEngine;
 /// 注入パラメータのリスト（手動作成部分）
 /// 自動生成部分とpartial classで結合される
 /// </summary>
-[CreateAssetMenu(fileName = "InjectParamList", menuName = "DWW/InjectParamList")]
+[CreateAssetMenu(fileName = "InjectParamList", menuName = "Game/InjectParamList")]
 public partial class InjectParamList : ScriptableObject
 {
     [Header("Manual Parameters")]

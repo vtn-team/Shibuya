@@ -6,7 +6,7 @@ using UnityEngine;
 /// パラメータ注入設定
 /// 使用するInjectParamListを選択する
 /// </summary>
-//[CreateAssetMenu(fileName = "ParamInjectSettings", menuName = "DWW/ParamInjectSettings")]
+[CreateAssetMenu(fileName = "ParamInjectSettings", menuName = "Game/ParamInjectSettings")]
 public class ParamInjectSettings : ScriptableObject
 {
     [Header("Inject Settings")]

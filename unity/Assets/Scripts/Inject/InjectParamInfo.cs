@@ -37,7 +37,7 @@ public class ParamInfo
 /// <summary>
 /// 注入先の変数名の説明を記載するアセット
 /// </summary>
-//[CreateAssetMenu(fileName = "InjectParamInfo", menuName = "DWW/InjectParamInfo")]
+[CreateAssetMenu(fileName = "InjectParamInfo", menuName = "Game/InjectParamInfo")]
 public class InjectParamInfo : ScriptableObject
 {
     [Header("Parameter Information List")]
